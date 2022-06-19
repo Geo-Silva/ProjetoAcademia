@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+D:\Win10\Documents\Projeto\ProjetoAcademia\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+2960614228.index
+377755049.index

@@ -1,0 +1,74 @@
+package projeto.academia2022.logando;
+
+import javax.swing.JOptionPane;
+
+public class Login {
+	
+	public static void logar() {
+		
+		byte opcao;
+		
+		opcao = Byte.parseByte(
+				JOptionPane.showInputDialog(null, "==Bem vindo ao sistema de academia versão 1.0=="
+				+ "\nPara continuar, faça o login ou seu registro"
+				+ "\n0 - Sair"
+				+ "\n1 - Logar"
+				+ "\n2 - Registar")
+				);
+		
+		switch(opcao) {
+		
+		case 0:
+			
+			JOptionPane.showMessageDialog(null, "Saindo");
+			
+			break;
+			
+		case 1:
+			
+			entrar();
+			
+			break;
+			
+		case 2:
+			
+			registrar();
+			
+			break;
+			
+		default:
+			
+			JOptionPane.showMessageDialog(null, "Opção inválida!");
+			logar();
+			
+			break;
+	
+		}
+		
+	}
+
+	private static void registrar() {
+		
+		
+		
+	}
+
+	private static void entrar() {
+		
+		String user, pass;
+		
+		user = JOptionPane.showInputDialog(null, "Usuário:");
+		pass = JOptionPane.showInputDialog(null, "Senha:");
+		
+		if() {
+			
+			
+		}else {
+			
+			
+		}
+		
+		
+	}
+
+}

@@ -1,0 +1,13 @@
+package projeto.academia2022.cliente;
+
+public class MenuCliente {
+
+	public static void menu() {
+		
+		
+		
+		
+		
+	}
+	
+}

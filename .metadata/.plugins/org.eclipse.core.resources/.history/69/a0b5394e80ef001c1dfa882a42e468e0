@@ -1,0 +1,62 @@
+package projeto.academia2022.cliente;
+
+import projeto.academia2022.repo.Pessoa;
+
+public class Cliente extends Pessoa {
+
+	public String numeroCartao;
+	public String tipoPlano;
+	public String equipFav;
+	
+	public Cliente(){
+		
+		
+	}
+
+	public Cliente(String numeroCartao, String tipoPlano, String equipFav) {
+		super();
+		this.numeroCartao = numeroCartao;
+		this.tipoPlano = tipoPlano;
+		this.equipFav = equipFav;
+	}
+
+	public Cliente(String nome, String cpf, String idade, String endereco, String numeroContato) {
+		super(nome, cpf, idade, endereco, numeroContato);
+		
+	}
+	
+	public Cliente(String numeroCartao, String tipoPlano, String equipFav, String nome, String cpf, String idade, String endereco, String numeroContato) {
+		super(nome, cpf, idade, endereco, numeroContato);
+		this.numeroCartao = numeroCartao;
+		this.tipoPlano = tipoPlano;
+		this.equipFav = equipFav;
+		
+	}
+
+	public String getNumeroCartao() {
+		return numeroCartao;
+	}
+
+	public void setNumeroCartao(String numeroCartao) {
+		this.numeroCartao = numeroCartao;
+	}
+
+	public String getTipoPlano() {
+		return tipoPlano;
+	}
+
+	public void setTipoPlano(String tipoPlano) {
+		this.tipoPlano = tipoPlano;
+	}
+
+	public String getEquipFav() {
+		return equipFav;
+	}
+
+	public void setEquipFav(String equipFav) {
+		this.equipFav = equipFav;
+	}
+	
+	
+	
+}

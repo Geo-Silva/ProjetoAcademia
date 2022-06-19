@@ -1,0 +1,13 @@
+package projeto.academia2022.repo;
+
+/**
+ * 
+ * "Open-to-Improvements"
+ * Aberto-para-Melhorias
+ */
+
+
+public @interface OTI {
+
+	
+}

@@ -1,0 +1,11 @@
+package projeto.academia2022.logando;
+
+public class Login {
+	
+	public static void logar() {
+		
+		
+		
+	}
+
+}

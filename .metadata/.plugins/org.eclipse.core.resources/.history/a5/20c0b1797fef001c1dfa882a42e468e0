@@ -1,0 +1,47 @@
+package projeto.academia2022.cliente;
+
+import javax.swing.JOptionPane;
+
+public class MenuCliente {
+
+	public static void menu() {
+		
+		byte opcao;
+		
+		opcao = Byte.parseByte(
+				JOptionPane.showInputDialog(null, "===Menu de Clientes==="
+				+ "\nEscolha abaixo o que você deseja fazer:"
+				+ "\n0 - Voltar;"
+				+ "\n1 - Cadastrar um cliente;"
+				+ "\n2 - Ver lista de clientes;"
+				+ "\n3 - Ver tipos de planos;")
+				);
+		
+		switch(opcao) {
+		
+		case 0:
+			//o menu principal é um do-while mesmo...
+			break;
+		
+		case 1:
+			
+			
+			
+			break;
+			
+		case 2:
+			
+			
+			
+			break;
+			
+		case 3:
+			
+			
+			
+			break;
+		}
+		
+	}
+	
+}

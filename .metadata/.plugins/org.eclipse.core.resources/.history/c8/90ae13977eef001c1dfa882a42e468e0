@@ -1,0 +1,59 @@
+package projeto.academia2022;
+
+import javax.swing.JOptionPane;
+
+import projeto.academia2022.logando.Login;
+import projeto.academia2022.repo.Repositorio;
+
+public class Main {
+
+	private static byte opcao;
+	
+	public static void main(String[] args) {
+		
+		Repositorio.carregandoUsuarios();
+		Login.logar(); //fazer login != cadastrar cliente
+		
+		do {
+			
+			fazerMenu();
+			
+			switch(opcao) {
+			
+			case 0:
+				
+				
+				
+				break;
+			
+			
+			
+			
+			
+			}
+			
+			
+			
+			
+			
+		}while(opcao != 0);
+		
+
+	}
+
+	private static void fazerMenu() {
+		
+		String menu = "Bem vindo ao menu principal!";
+		menu += "\nEscolha abaixo qual operação você deseja fazer";
+		menu += "\n0 - Deslogar;";
+		menu += "\n1 - Administrar clientes;";
+		menu += "\n2 - Administrar funcionários;";
+		menu += "\n3 - Administrar equipamentos";
+		
+		opcao = Byte.parseByte(
+				JOptionPane.showInputDialog(null, menu)
+				);
+
+	}
+
+}

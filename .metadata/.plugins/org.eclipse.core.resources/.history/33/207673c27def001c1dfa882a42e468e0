@@ -1,0 +1,16 @@
+package projeto.academia2022.repo;
+
+import java.util.HashMap;
+
+public class Repositorio {
+
+	public static HashMap<String, String> usuarios = new HashMap<>();
+	
+	public static void carregandoUsuarios() {
+		
+		usuarios.put("Geovani", "160702");
+		usuarios.put("admin", "admin");
+		usuarios.put("Marcos", "theboss1990");
+		**
+	}
+}

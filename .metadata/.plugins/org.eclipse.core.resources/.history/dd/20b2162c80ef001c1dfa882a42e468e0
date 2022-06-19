@@ -1,0 +1,18 @@
+package projeto.academia2022.cliente;
+
+import projeto.academia2022.repo.Pessoa;
+
+public class Cliente extends Pessoa {
+
+	public String numeroCartao;
+	public String tipoPlano;
+	public String equipFav;
+	
+	public Cliente(){
+		
+		
+	}
+	
+	
+	
+}

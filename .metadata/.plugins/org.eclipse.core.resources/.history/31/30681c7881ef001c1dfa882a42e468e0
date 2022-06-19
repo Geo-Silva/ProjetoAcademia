@@ -1,0 +1,42 @@
+package projeto.academia2022.repo;
+
+import java.util.HashMap;
+
+import projeto.academia2022.cliente.Cliente;
+
+public class Repositorio {
+
+	public static HashMap<String, String> usuarios = new HashMap<>();
+	
+	public static HashMap<String, String> clientes = new HashMap<>();
+	
+	public static void carregandoUsuarios() {
+		
+		usuarios.put("Geovani", "160702");
+		usuarios.put("admin", "admin");
+		usuarios.put("Marcos", "theboss1990");
+		
+	}
+	
+	public static void carregandoClientes() {
+		
+		clientes.put("Yudi", "894.363.610-50");
+		clientes.put("Adrielle", "795.997.400-41");
+		clientes.put("Roberto", "798.466.220-74");
+		clientes.put("Ana", "454.634.380-99");
+		
+		Cliente cliente1 = new Cliente();
+		
+		cliente1.setNome("");
+		cliente1.setCpf("");
+		cliente1.setIdade("");
+		cliente1.setNumeroCartao("");
+		cliente1.setEndereco("");
+		cliente1.setNumeroContato("");
+		cliente1.setTipoPlano("");
+		cliente1.setEquipFav("");
+		
+		
+	}
+	
+}

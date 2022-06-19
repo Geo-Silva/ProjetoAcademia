@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="projeto.academia2022.logando.Login"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="projeto.academia2022.cliente.MenuCliente"/>
+    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="projeto.academia2022.repo.Pessoa"/>
+    <fullyQualifiedTypeName name="projeto.academia2022.cliente.Cliente"/>
+    <fullyQualifiedTypeName name="projeto.academia2022.repo.OTI"/>
+    <fullyQualifiedTypeName name="projeto.academia2022.repo.Repositorio"/>
+    <fullyQualifiedTypeName name="projeto.academia2022.repo.OTI.OrdemPrioridade"/>
+    <fullyQualifiedTypeName name="projeto.academia2022.Main"/>
+</qualifiedTypeNameHistroy>

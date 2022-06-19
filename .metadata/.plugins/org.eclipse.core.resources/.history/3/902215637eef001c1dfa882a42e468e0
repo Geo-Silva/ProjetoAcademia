@@ -1,0 +1,16 @@
+package projeto.academia2022;
+
+import projeto.academia2022.logando.Login;
+import projeto.academia2022.repo.Repositorio;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Repositorio.carregandoUsuarios();
+		Login.logar(); //fazer login != cadastrar cliente
+		
+
+	}
+
+}

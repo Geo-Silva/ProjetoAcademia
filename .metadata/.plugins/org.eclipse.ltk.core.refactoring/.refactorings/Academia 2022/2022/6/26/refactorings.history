@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;novoCliente&apos; in &apos;projeto.academia2022.funcionario.MenuFunc.cadastrar()&apos; to &apos;novoFunc&apos;&#x0D;&#x0A;- Original project: &apos;Academia 2022&apos;&#x0D;&#x0A;- Original element: &apos;projeto.academia2022.funcionario.MenuFunc.cadastrar().novoCliente&apos;&#x0D;&#x0A;- Renamed element: &apos;novoCliente&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;novoCliente&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;projeto.academia2022.funcionario{MenuFunc.java[MenuFunc~cadastrar@novoCliente!827!862!835!845!QCliente;!0!false" name="novoFunc" references="true" stamp="1655845427030" version="1.0"/>
+</session>

@@ -3,12 +3,15 @@ package projeto.academia2022.repo;
 import java.util.HashMap;
 
 import projeto.academia2022.cliente.Cliente;
+import projeto.academia2022.funcionario.Funcionario;
 
 public class Repositorio {
 
 	public static HashMap<String, String> usuarios = new HashMap<>();
 	
 	public static HashMap<String, String> clientes = new HashMap<>();
+	
+	public static HashMap<String, String> funcionario = new HashMap<>();
 	
 	public static void carregandoUsuarios() {
 		
@@ -70,6 +73,59 @@ public class Repositorio {
 		cliente4.setEquipFav("Colchonete");
 		
 
+	}
+	
+	public static void carregandoFuncionarios() {
+		
+		funcionario.put("Eduardo", "Personal-Trainer");
+		funcionario.put("Maria", "Recepcionista");
+		funcionario.put("Thiago", "Professor-Edf");
+		funcionario.put("Rafael", "Limpeza");
+		
+		Funcionario func1 = new Funcionario();
+		
+		func1.setNome("Eduardo");
+		func1.setCpf("291.951.390-79");
+		func1.setIdade("26");
+		func1.setSalario(3.500f);
+		func1.setEndereco("Rua-Azul");
+		func1.setNumeroContato("8764-4712");
+		func1.setTurno("Tarde");
+		func1.setFuncao("Personal-Trainer");
+		
+		Funcionario func2 = new Funcionario();
+		
+		func2.setNome("Maria");
+		func2.setCpf("278.934.170-21");
+		func2.setIdade("20");
+		func2.setSalario(1.740f);
+		func2.setEndereco("Rua-Sebastiao");
+		func2.setNumeroContato("9999-1111"); //vai que existe
+		func2.setTurno("Integral");
+		func2.setFuncao("Recepcionista");
+		
+		Funcionario func3 = new Funcionario();
+		
+		func3.setNome("Thiago");
+		func3.setCpf("173.773.870-84");
+		func3.setIdade("30");
+		func3.setSalario(2.800f); //prof ainda ganha pouco nesse universo triste que eu criei, srry
+		func3.setEndereco("Rua-Maravilha");
+		func3.setNumeroContato("3567-1362");
+		func3.setTurno("Manha");
+		func3.setFuncao("Prof-Edf");
+		
+		Funcionario func4 = new Funcionario();
+		
+		func4.setNome("Rafael");
+		func4.setCpf("788.003.950-31");
+		func4.setIdade("22");
+		func4.setSalario(1.500f); //pouca coisa para limpar = menos salario, certo?
+		func4.setEndereco("Rua-Colonia");
+		func4.setNumeroContato("6426-8463");
+		func4.setTurno("Noturno");
+		func4.setFuncao("Limpeza");
+		
 	}
 	
 }

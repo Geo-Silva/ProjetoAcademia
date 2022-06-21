@@ -18,7 +18,8 @@ public class MenuCliente {
 				+ "\n0 - Voltar;"
 				+ "\n1 - Cadastrar um cliente;"
 				+ "\n2 - Ver lista de clientes;"
-				+ "\n3 - Ver tipos de planos;")
+				+ "\n3 - Procurar um cliente;"
+				+ "\n4 - Ver tipos de planos;")
 				);
 		
 		switch(opcao) {
@@ -41,13 +42,56 @@ public class MenuCliente {
 			
 		case 3:
 			
+			//procurarCliente();
+			
+			break;
+			
+		case 4:
+			
 			verPlanos();
+			
+			break;
+			
+		default:
+			
+			JOptionPane.showMessageDialog(null, "Opção inválida!");
+			menu();
 			
 			break;
 			
 		}
 		
 	}
+
+//	//private static void procurarCliente() {
+//		
+//		String nome, cpf;
+//		byte opcao;
+//		
+//		opcao = Byte.parseByte(
+//				JOptionPane.showInputDialog(null, "Você deseja procurar por CPF ou por nome?"
+//						+ "\n0 - Voltar;"
+//						+ "\n1 - Nome;"
+//						+ "\n2 - CPF;")
+//				);
+//		
+//		switch(opcao) {
+//		
+//		case 0:
+//			
+//			menu();
+//			
+//			break;
+//			
+//		case 1:
+//			
+//			nome = JOptionPane.showInputDialog(null, "Digite o nome:");
+//		
+//			//for()
+//			
+//		}
+//		
+//	}
 
 	@OTI(ordemPrioridade = OrdemPrioridade.IMPORTANTE, item = "Definir melhor os tipos de planos (valores principalmente) e fazer esse método mais otimizado e eficiente, já que eu fiz de maneira simples", quemAssume = "Qualquer um")
 	private static void verPlanos() {

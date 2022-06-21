@@ -1,0 +1,50 @@
+package projeto.academia2022.funcionario;
+
+import javax.swing.JOptionPane;
+
+public class MenuFunc {
+
+	public static void menu() {
+		
+		byte opcao;
+		
+		opcao = Byte.parseByte(
+				JOptionPane.showInputDialog(null, "===Menu de Funcionários=="
+						+ "\nO que você deseja fazer?"
+						+ "\n0 - Voltar;"
+						+ "\n1 - Cadastrar um novo funcionário;"
+						+ "\n2 - Ver lista de funcionários;")
+						);
+		
+		switch(opcao) {
+		
+		case 0:
+			
+			break;
+			
+		case 1:
+			
+			cadastrar();
+			
+			break;
+			
+		case 2:
+			
+			//verFunc;
+			
+			break;
+		
+		
+		
+		}
+		
+		
+	}
+
+	private static void cadastrar() {
+		
+		
+		
+	}
+	
+}

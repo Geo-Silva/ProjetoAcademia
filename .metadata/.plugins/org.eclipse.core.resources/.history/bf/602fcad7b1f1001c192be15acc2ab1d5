@@ -1,0 +1,116 @@
+package projeto.academia2022.funcionario;
+
+import javax.swing.JOptionPane;
+
+import projeto.academia2022.repo.OTI;
+import projeto.academia2022.repo.Repositorio;
+import projeto.academia2022.repo.OTI.OrdemPrioridade;
+
+public class MenuFunc {
+
+	public static void menu() {
+		
+		byte opcao;
+		
+		opcao = Byte.parseByte(
+				JOptionPane.showInputDialog(null, "===Menu de Funcionários=="
+						+ "\nO que você deseja fazer?"
+						+ "\n0 - Voltar;"
+						+ "\n1 - Cadastrar um novo funcionário;"
+						+ "\n2 - Ver lista de funcionários;")
+						);
+		
+		switch(opcao) {
+		
+		case 0:
+			
+			break;
+			
+		case 1:
+			
+			cadastrar();
+			
+			break;
+			
+		case 2:
+			
+			verFunc();
+			
+			break;
+		
+		default:
+			
+			JOptionPane.showMessageDialog(null, "Opção inválida!");
+			menu();
+			
+			break;
+		
+		}
+		
+		
+	}
+
+	private static void cadastrar() {
+		
+		String nome, cpf, idade, numeroContato, endereco, funcao, turno;
+		float salario;
+		
+		Funcionario novoFunc = new Funcionario();
+		
+		nome = JOptionPane.showInputDialog(null, "Nome:");
+		novoFunc.setNome(nome);
+		
+		cpf = JOptionPane.showInputDialog(null, "CPF:");
+		novoFunc.setCpf(cpf);
+		
+//		if(Pesso(cpf)) {
+//			Aqui devia ter um método de pesquisar se já existe tal cpf, sei fazer isso com o hashmap
+//			que foi o caso da classe cliente lá, mas diretamente da classe, no caso Pessoa, não sei 
+//			ou não me lembro
+//			JOptionPane.showMessageDialog(null, "Este CPF já está cadastrado!");
+//			menu();
+//			
+//		}
+		
+		idade = JOptionPane.showInputDialog(null, "Idade:");
+		novoFunc.setIdade(idade);
+		
+		numeroContato = JOptionPane.showInputDialog(null, "Número de contato:");
+		novoFunc.setNumeroContato(numeroContato);
+		
+		endereco = JOptionPane.showInputDialog(null, "Endereço:");
+		novoFunc.setEndereco(endereco);
+		
+		funcao = JOptionPane.showInputDialog(null, "Função:");
+		novoFunc.setFuncao(funcao);
+		
+		Repositorio.funcionario.put(nome, funcao);
+		
+		salario = Float.parseFloat(
+				JOptionPane.showInputDialog(null, "Salário:"));
+		novoFunc.setSalario(salario);
+		
+		turno = JOptionPane.showInputDialog(null, "Turno de trabalho:");
+		novoFunc.setTurno(turno);
+		
+		JOptionPane.showMessageDialog(null, "Cadastro realizado com sucesso!");
+		menu();
+		
+	}
+	
+	@OTI(ordemPrioridade = OrdemPrioridade.CRITICO, item = "Fazer esse método de maneira mais otimizada (um laço de for talvez?) usando o JOptionPane", quemAssume = "Qualquer um")
+	
+	private static void verFunc() {
+
+		//mesma pegada e ideia do MenuCliente, ao método de procurar lá.
+		//aberto para melhorias também :v
+		//ctrl+c / ctrl+v da outra classe, eu sei, mas já expliquei lá na outra classe o porque de ser assim
+		
+		JOptionPane.showMessageDialog(null, "Ao todo, temos " + Repositorio.funcionario.size() + " funcionários.");
+		JOptionPane.showMessageDialog(null, "Estes sendo: " + Repositorio.funcionario.keySet());
+		JOptionPane.showMessageDialog(null, "Respectivas funções: " + Repositorio.funcionario.values());
+		menu();
+		
+	}
+	
+}

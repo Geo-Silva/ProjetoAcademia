@@ -48,6 +48,12 @@ public class MenuCliente {
 			
 		case 4:
 			
+			deletar();
+			
+			break;
+			
+		case 5:
+			
 			verPlanos();
 			
 			break;
@@ -62,38 +68,61 @@ public class MenuCliente {
 		}
 		
 	}
+	
+	/*
+	 * private static void procurarCliente() {
+	 * 
+	 * String nome, cpf; byte opcao;
+	 * 
+	 * opcao = Byte.parseByte( JOptionPane.showInputDialog(null,
+	 * "Você deseja procurar por CPF ou por nome?" + "\n0 - Voltar;" + "\n1 - Nome;"
+	 * + "\n2 - CPF;") );
+	 * 
+	 * switch(opcao) {
+	 * 
+	 * case 0:
+	 * 
+	 * menu();
+	 * 
+	 * break;
+	 * 
+	 * case 1:
+	 * 
+	 * nome = JOptionPane.showInputDialog(null, "Digite o nome:");
+	 * 
+	 * Repositorio
+	 * 
+	 * }
+	 * 
+	 * }
+	 */
 
-//	//private static void procurarCliente() {
-//		
-//		String nome, cpf;
-//		byte opcao;
-//		
-//		opcao = Byte.parseByte(
-//				JOptionPane.showInputDialog(null, "Você deseja procurar por CPF ou por nome?"
-//						+ "\n0 - Voltar;"
-//						+ "\n1 - Nome;"
-//						+ "\n2 - CPF;")
-//				);
-//		
-//		switch(opcao) {
-//		
-//		case 0:
-//			
-//			menu();
-//			
-//			break;
-//			
-//		case 1:
-//			
-//			nome = JOptionPane.showInputDialog(null, "Digite o nome:");
-//		
-//			//for()
-//			
-//		}
-//		
-//	}
+	private static void deletar() {
+		
+		//infelizmente não sei como fazer para remover da classe "Pessoa" mesmo
+		//Remover de um HashMap não é remover completamente
+		String nome;
+				
+		nome = JOptionPane.showInputDialog(null, "Digite o nome para ser removido:");
+				
+		if(Repositorio.clientes.containsKey(nome)) {
+					
+			Repositorio.clientes.remove(nome);
+					
+			JOptionPane.showMessageDialog(null, "Removido com sucesso!");
+					
+		}else {
+					
+			JOptionPane.showMessageDialog(null, "Nome de funcionário inexistente!");
+			menu();
+					
+		}
+		
+	}
+	
 
 	@OTI(ordemPrioridade = OrdemPrioridade.IMPORTANTE, item = "Definir melhor os tipos de planos (valores principalmente) e fazer esse método mais otimizado e eficiente, já que eu fiz de maneira simples", quemAssume = "Qualquer um")
+	
 	private static void verPlanos() {
 		
 		JOptionPane.showMessageDialog(null, "Esses são os tipos de planos atuais:"
@@ -108,7 +137,6 @@ public class MenuCliente {
 		
 	}
 	
-
 	@OTI(ordemPrioridade = OrdemPrioridade.CRITICO, item = "Fazer esse método de maneira mais otimizada (um laço de for talvez?) usando o JOptionPane", quemAssume = "Qualquer um")
 	
 	private static void verClientes() {
@@ -121,7 +149,6 @@ public class MenuCliente {
 		//ei, é por isso que está com annotation OTI em Crítico, isso tem que ser melhorado assim que se tiver conhecimento de uma
 		//maneira mais eficiente/otimizada
 		//lembrando que TEM QUE SER com o JOptionPane
-		
 		
 		JOptionPane.showMessageDialog(null, "Ao todo, temos " + Repositorio.clientes.size() + " clientes.");
 		JOptionPane.showMessageDialog(null, "Estes sendo: " + Repositorio.clientes.keySet());

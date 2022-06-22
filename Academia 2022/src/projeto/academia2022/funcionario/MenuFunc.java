@@ -2,7 +2,9 @@ package projeto.academia2022.funcionario;
 
 import javax.swing.JOptionPane;
 
+import projeto.academia2022.repo.OTI;
 import projeto.academia2022.repo.Repositorio;
+import projeto.academia2022.repo.OTI.OrdemPrioridade;
 
 public class MenuFunc {
 
@@ -15,7 +17,8 @@ public class MenuFunc {
 						+ "\nO que você deseja fazer?"
 						+ "\n0 - Voltar;"
 						+ "\n1 - Cadastrar um novo funcionário;"
-						+ "\n2 - Ver lista de funcionários;")
+						+ "\n2 - Ver lista de funcionários;"
+						+ "\n3 - Remover um funcionário;")
 						);
 		
 		switch(opcao) {
@@ -32,7 +35,13 @@ public class MenuFunc {
 			
 		case 2:
 			
-			//verFunc;
+			verFunc();
+			
+			break;
+			
+		case 3:
+			
+			deletar();
 			
 			break;
 		
@@ -46,6 +55,27 @@ public class MenuFunc {
 		}
 		
 		
+	}
+
+	private static void deletar() {
+		//infelizmente não sei como fazer para remover da classe "Pessoa" mesmo
+		//Remover de um HashMap não é remover completamente
+		String nome;
+		
+		nome = JOptionPane.showInputDialog(null, "Digite o nome para ser removido:");
+		
+		if(Repositorio.funcionario.containsKey(nome)) {
+			
+			Repositorio.funcionario.remove(nome);
+			
+			JOptionPane.showMessageDialog(null, "Removido com sucesso!");
+			
+		}else {
+			
+			JOptionPane.showMessageDialog(null, "Nome de funcionário inexistente!");
+			menu();
+			
+		}
 	}
 
 	private static void cadastrar() {
@@ -92,6 +122,21 @@ public class MenuFunc {
 		novoFunc.setTurno(turno);
 		
 		JOptionPane.showMessageDialog(null, "Cadastro realizado com sucesso!");
+		menu();
+		
+	}
+	
+	@OTI(ordemPrioridade = OrdemPrioridade.CRITICO, item = "Fazer esse método de maneira mais otimizada (um laço de for talvez?) usando o JOptionPane", quemAssume = "Qualquer um")
+	
+	private static void verFunc() {
+
+		//mesma pegada e ideia do MenuCliente, ao método de procurar lá.
+		//aberto para melhorias também :v
+		//ctrl+c / ctrl+v da outra classe, eu sei, mas já expliquei lá na outra classe o porque de ser assim
+		
+		JOptionPane.showMessageDialog(null, "Ao todo, temos " + Repositorio.funcionario.size() + " funcionários.");
+		JOptionPane.showMessageDialog(null, "Estes sendo: " + Repositorio.funcionario.keySet());
+		JOptionPane.showMessageDialog(null, "Respectivas funções: " + Repositorio.funcionario.values());
 		menu();
 		
 	}

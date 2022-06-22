@@ -1,0 +1,24 @@
+package projeto.academia2022.equipamento;
+
+import javax.swing.JOptionPane;
+
+public class MenuEquip {
+
+	public static void menu() {
+		
+		byte opcao;
+		
+		opcao = Byte.parseByte(
+			JOptionPane.showInputDialog(null, "===Menu de Equipamentos==="
+				+ "\nEscolha o que você deseja fazer:"
+				+ "\n0 - Voltar;"
+				+ "\n1 - Adicionar um novo equipamento;"
+				+ "\n2 - Adicionar mais unidades de um equipamento;"
+				+ "\n3 - Remover unidades de um equipamento;"
+				+ "\n4 - Remover um equipamento")
+			);
+		
+		
+	}
+	
+}

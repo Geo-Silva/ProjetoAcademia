@@ -8,10 +8,14 @@ import projeto.academia2022.funcionario.Funcionario;
 public class Repositorio {
 
 	public static HashMap<String, String> usuarios = new HashMap<>();
-	
 	public static HashMap<String, String> clientes = new HashMap<>();
-	
 	public static HashMap<String, String> funcionario = new HashMap<>();
+	public static HashMap<String, Integer> equipamento = new HashMap<>();
+	
+	public static Cliente cliente1 = new Cliente();
+	public static Cliente cliente2 = new Cliente();
+	public static Cliente cliente3 = new Cliente();
+	public static Cliente cliente4 = new Cliente();
 	
 	public static void carregandoUsuarios() {
 		
@@ -28,18 +32,14 @@ public class Repositorio {
 		clientes.put("Roberto", "798.466.220-74");
 		clientes.put("Ana", "454.634.380-99");
 		
-		Cliente cliente1 = new Cliente();
-		
 		cliente1.setNome("Yudi");
 		cliente1.setCpf("894.363.610-50");
 		cliente1.setIdade("32");
-		cliente1.setNumeroCartao("04032000-1254-2234"); //quero ver pegar a referencia aqui
+		cliente1.setNumeroCartao("04032000-4218-0000"); //quero ver pegar a referencia aqui
 		cliente1.setEndereco("Rua-Playstation"); //nome gringo, juro
 		cliente1.setNumeroContato("4002-8922"); //mera coincidencia
 		cliente1.setTipoPlano("Anual");
 		cliente1.setEquipFav("Halteres");
-		
-		Cliente cliente2 = new Cliente();
 		
 		cliente2.setNome("Adrielle");
 		cliente2.setCpf("795.997.400-41");
@@ -50,8 +50,6 @@ public class Repositorio {
 		cliente2.setTipoPlano("Teste");
 		cliente2.setEquipFav("Esteira");
 		
-		Cliente cliente3 = new Cliente();
-		
 		cliente3.setNome("Roberto");
 		cliente3.setCpf("798.466.220-74");
 		cliente3.setIdade("27");
@@ -60,8 +58,6 @@ public class Repositorio {
 		cliente3.setNumeroContato("8334-7334");
 		cliente3.setTipoPlano("Mensal");
 		cliente3.setEquipFav("Bicicleta");
-		
-		Cliente cliente4 = new Cliente();
 		
 		cliente4.setNome("Ana");
 		cliente4.setCpf("454.634.380-99");
@@ -126,6 +122,18 @@ public class Repositorio {
 		func4.setTurno("Noturno");
 		func4.setFuncao("Limpeza");
 		
+	}
+	
+	public static void carregandoEquipamentos() {
+		
+		//academia pobre por enquanto, tá começando, dá um crédito vai
+		
+		equipamento.put("Haltere", 5);
+		equipamento.put("Colchonete", 20);
+		equipamento.put("Bolas", 7);
+		equipamento.put("Esteira", 4);
+		equipamento.put("Bicicleta", 2);
+	
 	}
 	
 }

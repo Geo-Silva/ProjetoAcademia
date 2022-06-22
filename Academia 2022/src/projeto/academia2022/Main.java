@@ -3,6 +3,7 @@ package projeto.academia2022;
 import javax.swing.JOptionPane;
 
 import projeto.academia2022.cliente.MenuCliente;
+import projeto.academia2022.equipamento.MenuEquip;
 import projeto.academia2022.funcionario.MenuFunc;
 import projeto.academia2022.logando.Login;
 import projeto.academia2022.repo.Repositorio;
@@ -16,6 +17,7 @@ public class Main {
 		Repositorio.carregandoUsuarios();
 		Repositorio.carregandoFuncionarios();
 		Repositorio.carregandoClientes();
+		Repositorio.carregandoEquipamentos();
 		Login.logar(); //fazer login != cadastrar cliente
 		
 		do {
@@ -44,7 +46,7 @@ public class Main {
 				
 			case 3:
 				
-				//MenuEquip.menu();
+				MenuEquip.menu();
 				
 				break;
 			

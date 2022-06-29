@@ -8,6 +8,8 @@ de mensalidades.Este sistema é voltado para os proprietarios de academias
 para que seja gerenciado de forma pratica o seu negocio, e tambem trazer facilidade
 para o usuario(funcionario) no cadastro e informações demais de cada cliente.
 
+# Este é o Diagrama de Classes
+
 ![DiagramaClasses](/Diagramas%20de%20Classe%20Projeto.png "DiagramaClasse")
 
 # Autores
